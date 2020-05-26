@@ -37,12 +37,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.btn_linear:
                      intent = new Intent(RecyclerViewActivity.this, LinearRecyclerViewActivity.class);
+                     break;
                 case R.id.btn_hor:
                      intent = new Intent(RecyclerViewActivity.this, HorRecycViewActivity.class);
+                     break;
                 case R.id.btn_grid:
                      intent = new Intent(RecyclerViewActivity.this, GridRecycViewActivity.class);
+                     break;
                 case R.id.btn_stagger:
                     intent = new Intent(RecyclerViewActivity.this,StaggerRecycViewActivity.class);
+                    break;
             }
             startActivity(intent);
         }

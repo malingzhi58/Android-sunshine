@@ -25,13 +25,13 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHold
 
 
     @Override
-    public GridAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_hor_item, parent, false));
 
     }
 
     @Override
-    public void onBindViewHolder(GridAdapter.LinearViewHolder holder, int position) {
+    public void onBindViewHolder(LinearViewHolder holder, int position) {
         holder.textView.setText("helloHor");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

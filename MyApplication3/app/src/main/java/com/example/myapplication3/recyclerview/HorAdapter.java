@@ -25,13 +25,13 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
 
 
     @Override
-    public HorAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_hor_item, parent, false));
 
     }
 
     @Override
-    public void onBindViewHolder(HorAdapter.LinearViewHolder holder, int position) {
+    public void onBindViewHolder(LinearViewHolder holder, int position) {
         holder.textView.setText("helloHor");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

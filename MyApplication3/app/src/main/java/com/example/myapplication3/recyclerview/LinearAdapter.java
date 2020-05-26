@@ -19,7 +19,6 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 {
     private Context mContext;
     private OnItemClickListener mListener;
-    private OnItemLongClickListener mLonglistener;
 
     public LinearAdapter(Context context,OnItemClickListener listener)
     {
@@ -27,25 +26,30 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
         this.mListener = listener;
     }
 
-//    @Override
-//    public int getItemViewType(int position) {
-//        if(position%2==0){
-//            return 0;
-//        }else  return 1;
-//        //        return super.getItemViewType(position);
-//    }
+    @Override
+    public int getItemViewType(int position) {
+        if(position%2==0){
+            return 0;
+        }else  return 1;
+        //        return super.getItemViewType(position);
+    }
 
     @Override
     public LinearAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        if(viewType==0)
-//            return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
-//        else return new LinearViewHolder2(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
+        if(viewType==0)
+            return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
+        else return new LinearViewHolder2(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item2, parent, false));
+//        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
     }
 
     @Override
     public void onBindViewHolder(LinearAdapter.LinearViewHolder holder, int position) {
-        holder.textView.setText("hello");
+        if(getItemViewType(position)==0){
+            holder.textView.setText("hello");
+        }else{
+            holder.textView.setText("你好");
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +67,7 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 10;
     }
 
 

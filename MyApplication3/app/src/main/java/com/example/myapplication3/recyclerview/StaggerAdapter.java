@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,13 +24,13 @@ public class StaggerAdapter extends RecyclerView.Adapter<StaggerAdapter.LinearVi
 
 
     @Override
-    public StaggerAdapter.LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LinearViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_stagger_item, parent, false));
 
     }
 
     @Override
-    public void onBindViewHolder(StaggerAdapter.LinearViewHolder holder, int position) {
+    public void onBindViewHolder(LinearViewHolder holder, int position) {
 //        holder.textView.setText("helloHor");
         if(position%2==0){
             holder.imageView.setImageResource(R.drawable.image1);
