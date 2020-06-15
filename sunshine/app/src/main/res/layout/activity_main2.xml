@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button1"
+        android:text="Weather First"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button2"
+        android:text="Weather Second"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button3"
+        android:text="Life Cycle"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button4"
+        android:text="Github Query"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button5"
+        android:text="GQuery AsycTask Loader"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button6"
+        android:text="Weather AsycTask Loader"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button7"
+        android:text="Audio"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button8"
+        android:text="Ty"
+        android:background="#D13939"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button9"
+        android:text="Sunshine Setting"
+        android:background="#D13939"/>
+</LinearLayout>
